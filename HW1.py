@@ -1,59 +1,59 @@
-# ---------------------4----------------------
-#برای گرفتن یک عدد شانسی
-from random import randint
-pc_ch = randint(0,20)
-# حلقه به تعداد فرصت های بازی
-for i in range(1,6):
-    print(f'lap{i}of{'5'}')
-    print('-'*40)
-    py_ch = int(input('enter your choice:'))
-    if py_ch < pc_ch:
-        print("guess higher")
-    elif py_ch > pc_ch:
-        print("guess lower")
-    elif pc_ch == py_ch:
-        print('you won')
-        break
-# زمانی که توی تعداد مجاز برنده نشه
-else:
-    print(f'you lost nummber is{pc_ch}')
+# # ---------------------4----------------------
+# #برای گرفتن یک عدد شانسی
+# from random import randint
+# pc_ch = randint(0,20)
+# # حلقه به تعداد فرصت های بازی
+# for i in range(1,6):
+#     print(f'lap{i}of{'5'}')
+#     print('-'*40)
+#     py_ch = int(input('enter your choice:'))
+#     if py_ch < pc_ch:
+#         print("guess higher")
+#     elif py_ch > pc_ch:
+#         print("guess lower")
+#     elif pc_ch == py_ch:
+#         print('you won')
+#         break
+# # زمانی که توی تعداد مجاز برنده نشه
+# else:
+#     print(f'you lost nummber is{pc_ch}')
 # ---------------------5-----------------------
-book ={}
-while True :
-    print('-'*40)
-    print('1)add \n2)search \n3)show \n4)exit')
-    ch = input('enter your choice: ')
-    # در صورت انتخاب نکردن عدد
-    if  not ch.isnumeric:
-        print('error choice num')
-        continue
-    # شرط انتخاب مورد ها
-    match int(ch):
-        # برای اضافه کردن کتاب و نویسنده 
-        case 1 :
-            print('-'*40)
-            name_book= input('enter neme book: ')
-            name_Author = input("enter Author's Name: ")
-            book[name_book] = name_Author
-        # پیدا کردن نویسنده یک کتاب 
-        case 2:
-            print('-'*40)
-            name_book= input('enter neme book:')
-            print(book.get(name_book,'not found'))
-        # نمایش تمام کتاب ها 
-        case 3:
-            print('-'*40)
-            print(book)
-        # خروج از برنامه 
-        case 4:
-            print('-'*40)
-            print('good bye')
-            break
-        # برای وارد کردن عددهایی به جز ۱-۴
-        case _:
-            print('-'*40)
-            print('error choice 1 or 2 or 3 or 4')
-            continue
+# book ={}
+# while True :
+#     print('-'*40)
+#     print('1)add \n2)search \n3)show \n4)exit')
+#     ch = input('enter your choice: ')
+#     # در صورت انتخاب نکردن عدد
+#     if  not ch.isnumeric:
+#         print('error choice num')
+#         continue
+#     # شرط انتخاب مورد ها
+#     match int(ch):
+#         # برای اضافه کردن کتاب و نویسنده 
+#         case 1 :
+#             print('-'*40)
+#             name_book= input('enter neme book: ')
+#             name_Author = input("enter Author's Name: ")
+#             book[name_book] = name_Author
+#         # پیدا کردن نویسنده یک کتاب 
+#         case 2:
+#             print('-'*40)
+#             name_book= input('enter neme book:')
+#             print(book.get(name_book,'not found'))
+#         # نمایش تمام کتاب ها 
+#         case 3:
+#             print('-'*40)
+#             print(book)
+#         # خروج از برنامه 
+#         case 4:
+#             print('-'*40)
+#             print('good bye')
+#             break
+#         # برای وارد کردن عددهایی به جز ۱-۴
+#         case _:
+#             print('-'*40)
+#             print('error choice 1 or 2 or 3 or 4')
+#             continue
 # ---------------------------6---------------------------
 Store_Products ={}
 while True:
@@ -65,9 +65,9 @@ while True:
         print('error choice num')
         continue
     #برای پاک کردن چیز های که  موجودی شون صفر شده   
-    for i in Store_Products: 
-        if Store_Products[i] == 0:
-            del i
+    for i in list(Store_Products.keys()): 
+        if Store_Products[i] <= 0:
+            del Store_Products[i]
     # شرط انتخاب مورد ها 
     match int(ch):
         # کردن یک کالای جدید یا بیشتر کردن کالای موجودadd
@@ -144,3 +144,4 @@ while True:
             print('-'*40)
             print('error choice 1-7')
             continue
+
