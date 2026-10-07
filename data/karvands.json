@@ -1,0 +1,25 @@
+{
+    "bootcamp": {
+        "title": "Karvand Python",
+        "year": 2026
+    },
+    "karvands": [
+        {
+            "id": 1,
+            "full_name": "darush",
+            "email": "darush84@gmail.com",
+            "city": "tehran",
+            "education": {
+                "degree": "bachelor",
+                "field": "oil engineer"
+            },
+            "skills": [
+                {
+                    "name": "python",
+                    "level": "mid level",
+                    "score": 80
+                }
+            ]
+        }
+    ]
+}
